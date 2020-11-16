@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es6: true,
   },
+  // 順番に注意
   extends: [
     "plugin:react/recommended",
     "airbnb",
@@ -13,6 +14,11 @@ module.exports = {
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    'plugin:prettier/recommended', 
+    'prettier',
+    'prettier/@typescript-eslint',
+    'prettier/react',
+    'prettier/standard'
   ],
   globals: {
     Atomics: "readonly",
@@ -28,7 +34,14 @@ module.exports = {
     sourceType: "module",
     tsconfigRootDir: __dirname,
   },
-  plugins: ["@typescript-eslint", "import", "jsx-a11y", "react", "react-hooks"],
+  plugins: [
+      "@typescript-eslint", 
+      "import", 
+      "jsx-a11y", 
+      'prettier',
+      "react", 
+      "react-hooks",
+    ],
   root: true,
   // 各ルールの適用の可否やエラーレベルの設定（後々調整する）
   // https://eslint.org/docs/rules/
